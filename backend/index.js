@@ -19,7 +19,18 @@ app.get("/api/greet", (req, res) => {
   res.json({ message: `Hello, ${name}! Welcome to Younglabs.` });
 });
 
+
+app.get("/", (req, res) => {
+  return res.json({
+    success: true,
+    message: "Your server is up and running",
+  });
+});
+
+
 // Start the server
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
+
+
