@@ -47,7 +47,6 @@ git clone https://github.com/SuhaniKapasiya/ScreeningTask.git
 #### 2️⃣ Install Dependencies  
 ```bash
 # Backend
-..cd
 cd backend
 npm install
 
