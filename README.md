@@ -11,6 +11,7 @@ A simple **React & Node.js** application that allows users to enter their name a
 - ✅ Frontend communicates with the API using Axios  
 - ✅ Proper error handling for missing names  
 - ✅ Easy setup and deployment  
+- ✅ **Custom Hook for API calls**  
 
 ---
 
@@ -41,17 +42,18 @@ Ensure you have the following installed on your system:
 #### 1️⃣ Clone the Repository  
 ```bash
 git clone https://github.com/SuhaniKapasiya/ScreeningTask.git
-cd ScreeningTask
 ```
 
 #### 2️⃣ Install Dependencies  
 ```bash
 # Backend
+..cd
 cd backend
 npm install
 
 # Frontend
-cd ../frontend
+..cd
+cd frontend
 npm install
 ```
 
@@ -108,6 +110,25 @@ GET /api/greet?name=John
 - Accepts user input (name)
 - Sends a request to the backend API
 - Displays the greeting response
+
+---
+
+## 🔄 Custom Hook (`useGreeting.js`)
+
+### **What it does**
+- Handles fetching the greeting message from the backend API.
+- Manages the response and error handling.
+- Stores the greeting message in state.
+
+### **Advantages of using the custom hook**
+- **Code Reusability**: Encapsulates API logic, making it reusable across components.
+- **Separation of Concerns**: Keeps API logic separate from UI components.
+- **Improved Readability**: Simplifies components by offloading state management and API calls.
+
+Usage example:
+```javascript
+const { message, getGreeting } = useGreeting();
+```
 
 ---
 
