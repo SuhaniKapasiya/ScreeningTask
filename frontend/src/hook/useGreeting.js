@@ -12,7 +12,9 @@ const useGreeting = () => {
      }
      try{
 
-        const response = await axios.get(`http://localhost:5000/api/greet?name=${name}`)
+        const response = await axios.get(
+          `https://screeningtaskbackend.onrender.com/api/greet?name=${name}`
+        );
          setMessage(response.data.message);
          
      }catch(error){
